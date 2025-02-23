@@ -5,6 +5,7 @@ const Notifications = () => {
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
+    // Listen for real-time notifications
     socket.on('orderStatusUpdated', (data) => {
       setNotifications((prev) => [
         { message: `Order ${data.orderId} status updated to ${data.status}`, id: Date.now() },
@@ -12,6 +13,7 @@ const Notifications = () => {
       ]);
     });
 
+    // Clean up the socket connection
     return () => {
       socket.off('orderStatusUpdated');
     };
