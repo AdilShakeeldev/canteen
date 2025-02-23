@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { placeOrder } from '../services/api';
 
 const Order = () => {
+  // eslint-disable-next-line no-unused-vars
   const [order, setOrder] = useState([]);
 
   const handlePlaceOrder = async () => {

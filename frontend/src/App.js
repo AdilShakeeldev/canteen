@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Menu from './components/Menu';
 import Order from './components/Order';
 import AdminPanel from './components/AdminPanel';
+import StaffPanel from './components/StaffPanel';
 import OrderHistory from './components/OrderHistory';
 import Notifications from './components/Notifications';
 import FavoriteOrders from './components/FavoriteOrders';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/order" element={<Order />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/staff" element={<StaffPanel />} />
         <Route path="/order-history" element={<OrderHistory />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/favorites" element={<FavoriteOrders />} />
